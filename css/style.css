@@ -4,7 +4,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 html {
@@ -12,6 +11,7 @@ html {
 }
 
 body {
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -21,11 +21,10 @@ body {
 
 a {
     text-decoration: none;
-    color: #000;
 }
 
 ul {
-    text-decoration: none;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -64,7 +63,8 @@ ul {
 }
 
 .cards {
-    width: 1200px;
+    max-width: 1100px;
+    width: 80%;
     background-color: #fff;
     border-radius: 10px;
     display: flex;
@@ -81,42 +81,79 @@ ul {
     text-align: center;
 }
 
-.card img {
-    width: 200px;
+.card>img {
+    width: 160px;
     border-radius: 50%;
     margin: 0 auto;
 }
 
-.card h1 {
+.card>h1 {
     color: #4366D2;
     letter-spacing: 5px;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 20px;
     margin-bottom: 0;
-    line-height: 45px;
+    line-height: 35px;
     font-family: "Titillium Web", sans-serif;
 }
 
-.card > h3 {
+.card>h3 {
     text-transform: capitalize;
     color: #484848;
     letter-spacing: 3px;
-    font-size: 1.3rem;
+    font-size: 18px;
     font-family: "Josefin Sans", sans-serif;
 }
 
-@media (max-width: 768px) {
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links li a {
+    color: #4366D2;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.social-links li a:hover {
+    color: #000000;
+}
+
+.social-links li a:active {
+    color: #03009e;
+}
+
+@media screen and (max-width: 992px) {
+    .cards {
+        width: 95%;
+    }
+
+    .card {
+        margin: 25px 0;
+        width: 100%;
+    }
+
+    .card>img {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .main-title {
         font-size: 2rem;
         line-height: 3rem;
         margin-bottom: 10px;
     }
+
     .cards {
         width: 90%;
         flex-wrap: wrap;
         margin-bottom: 30px;
         padding-top: 20px;
     }
+
     .card {
         margin: 0;
         padding: 20px 15px;
@@ -126,21 +163,19 @@ ul {
         flex-direction: column;
         text-align: center;
     }
+
+    .card:not(:last-child) {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #E6E6E6;
+    }
+
     .card img {
         width: 140px;
         border-radius: 50%;
         margin: 0 auto;
     }
-    .card h1 {
-        color: #4366D2;
-        letter-spacing: 5px;
-        font-size: 30px;
-        margin-top: 20px;
-        margin-bottom: 0;
-        line-height: 45px;
-        font-family: "Titillium Web", sans-serif;
-    }
-    .card > h3 {
+
+    .card>h3 {
         text-transform: capitalize;
         color: #484848;
         letter-spacing: 3px;

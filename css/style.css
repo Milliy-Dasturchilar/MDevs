@@ -111,17 +111,17 @@ ul {
     align-items: center;
 }
 
-.social-links li a {
+.social-links>li>a {
     color: #4366D2;
     font-size: 20px;
     margin: 0 10px;
 }
 
-.social-links li a:hover {
+.social-links>li>a:hover {
     color: #000000;
 }
 
-.social-links li a:active {
+.social-links>li>a:active {
     color: #03009e;
 }
 
@@ -136,7 +136,7 @@ ul {
     }
 
     .card>img {
-        width: 160px;
+        width: 150px;
     }
 }
 
@@ -169,7 +169,7 @@ ul {
         border-bottom: 1px solid #E6E6E6;
     }
 
-    .card img {
+    .card>img {
         width: 140px;
         border-radius: 50%;
         margin: 0 auto;

@@ -1,3 +1,0 @@
-# MDevs
-
-Own website
